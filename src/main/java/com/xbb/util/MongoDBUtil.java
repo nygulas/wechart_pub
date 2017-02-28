@@ -102,7 +102,7 @@ public enum MongoDBUtil {
      * @param collName
      * @return
      */
-    public MongoCollection<Document> getCollection(String dbName, String collName) {
+    public MongoCollection<Document> getCollection(String collName) {
         if (null == collName || "".equals(collName)) {
             return null;
         }
@@ -242,7 +242,7 @@ public enum MongoDBUtil {
 
         String collName = "name";
         List<String> list = MongoDBUtil.instance.getAllCollections();
-        System.out.println(list.size());
+        System.out.println(list);
         // 插入多条
         // for (int i = 1; i <= 4; i++) {
         // Document doc = new Document();
